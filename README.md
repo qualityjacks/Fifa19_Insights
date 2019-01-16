@@ -4,17 +4,25 @@
 ## Installation
 * Download the latest version of [Python](https://www.python.org/downloads/) (3.7) and install it on your system
 * Download [Anaconda Distribution](https://www.anaconda.com/download/) for Python 3.7 and install it on your system
-* Run "Anaconda Prompt" and type "jupyter notebook" in the command prompt to run the Jupyter Notebook
+* Run "Anaconda Prompt" and type "jupyter notebook" in the command prompt
 
 ## Documentation 
+Importing the Pandas and Matplotlib Library
+<blockquote>
+  <p>import pandas as pd</p>
+  <p>import matplotlib.pyplot as plt</p>
+</blockquote>
 
-
-
+Reading the [Dataset](https://www.kaggle.com/karangadiya/fifa19) into a DataFrame
+<blockquote>
+  <p>filename = 'data.csv'</p>
+  <p>data_raw = pd.read_csv(filename)</p>
+</blockquote>
 
 
 ## Contributing
-Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)
-Create your feature branch (git checkout -b feature/fooBar)
-Commit your changes (git commit -am 'Add some fooBar')
-Push to the branch (git push origin feature/fooBar)
-Create a new Pull Request
+* Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)
+* Create your feature branch (git checkout -b feature)
+* Commit your changes (git commit -am 'some-text')
+* Push to the branch (git push origin feature)
+* Create a new Pull Request
