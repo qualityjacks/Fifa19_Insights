@@ -1,4 +1,4 @@
-# Analysis Of FIFA 19's Player Data Using Pandas In Python  
+# FIFA 19 Insights Using Pandas In Python
 
 ## Installation
 
