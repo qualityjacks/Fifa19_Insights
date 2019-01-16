@@ -22,7 +22,7 @@ Reading the [Dataset](https://www.kaggle.com/karangadiya/fifa19) into a DataFram
 
 ## Contributing
 * Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)
-* Create your feature branch (git checkout -b feature)
-* Commit your changes (git commit -am 'some-text')
-* Push to the branch (git push origin feature)
+* Create your feature branch <blockquote>git checkout -b feature</blockquote>
+* Commit your changes <blockquote>git commit -m 'some-text'</blockquote>
+* Push to the branch <blockquote>git push origin feature</blockquote>
 * Create a new Pull Request
