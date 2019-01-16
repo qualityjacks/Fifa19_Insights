@@ -26,12 +26,12 @@ Create your feature branch
 ```python
 git checkout -b feature
 ```
-<br>Commit your changes
+Commit your changes
 ```python
   git commit -m 'some-text'
 ```
-<br>Push to the branch
+Push to the branch
 ```python
 git push origin feature
 ```
-<br>Create a new Pull Request
+Create a new Pull Request
