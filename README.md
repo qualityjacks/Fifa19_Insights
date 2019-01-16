@@ -27,9 +27,9 @@ Reading the [Dataset](https://www.kaggle.com/karangadiya/fifa19) into a DataFram
 git checkout -b feature
 ```
 * Commit your changes
-  ```python
+```python
   git commit -m 'some-text'
-  ```
+```
 * Push to the branch
 ```python
 git push origin feature
