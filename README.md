@@ -9,13 +9,13 @@
 ## Documentation 
 Importing the Pandas and Matplotlib Library
 ```python
-  import pandas as pd
-  import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt
 ```
 Reading the [Dataset](https://www.kaggle.com/karangadiya/fifa19) into a DataFrame
 ```python
-  filename = 'data.csv'
-  data_raw = pd.read_csv(filename)
+filename = 'data.csv'
+data_raw = pd.read_csv(filename)
 ```
 Print the imported data
 ```python
@@ -33,7 +33,22 @@ Check out the shape of DataFrame object
 ```python
 data_raw.shape
 ```
-
+Check if there are null values in the DataFrame
+```python
+data_raw.isnull().any().any() # If true is returned --> there are null values in the DataFrame
+```
+Get the columns having null values
+```python
+data_raw.isnull().any()
+```
+Get the total number of null values
+```python
+data_raw.isnull().sum().sum()
+```
+Get the number of null values for each of the columns
+```python
+data_raw.isnull().sum()
+```
 ## Contributing
 Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)<br>
 Create your feature branch
@@ -42,7 +57,7 @@ git checkout -b feature
 ```
 Commit your changes
 ```python
-  git commit -m 'some-text'
+git commit -m 'some-text'
 ```
 Push to the branch
 ```python
