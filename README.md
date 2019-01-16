@@ -8,21 +8,30 @@
 
 ## Documentation 
 Importing the Pandas and Matplotlib Library
-<blockquote>
-  <p>import pandas as pd</p>
-  <p>import matplotlib.pyplot as plt</p>
-</blockquote>
 
+```python
+  import pandas as pd
+  import matplotlib.pyplot as plt
+```
 Reading the [Dataset](https://www.kaggle.com/karangadiya/fifa19) into a DataFrame
-<blockquote>
-  <p>filename = 'data.csv'</p>
-  <p>data_raw = pd.read_csv(filename)</p>
-</blockquote>
+```python
+  filename = 'data.csv'
+  data_raw = pd.read_csv(filename)
+```
 
 
 ## Contributing
 * Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)
-* Create your feature branch <blockquote>git checkout -b feature</blockquote>
-* Commit your changes <blockquote>git commit -m 'some-text'</blockquote>
-* Push to the branch <blockquote>git push origin feature</blockquote>
+* Create your feature branch
+```python
+git checkout -b feature
+```
+* Commit your changes
+  ```python
+  git commit -m 'some-text'
+  ```
+* Push to the branch
+```python
+git push origin feature
+```
 * Create a new Pull Request
