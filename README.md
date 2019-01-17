@@ -304,30 +304,280 @@ Check out the columns data
 ```python
 data_raw.columns
 ```
+<div class="output_subarea output_text output_result"><pre>Index(['Unnamed: 0', 'ID', 'Name', 'Age', 'Photo', 'Nationality', 'Flag',
+       'Overall', 'Potential', 'Club', 'Club Logo', 'Value', 'Wage', 'Special',
+       'Preferred Foot', 'International Reputation', 'Weak Foot',
+       'Skill Moves', 'Work Rate', 'Body Type', 'Real Face', 'Position',
+       'Jersey Number', 'Joined', 'Loaned From', 'Contract Valid Until',
+       'Height', 'Weight', 'LS', 'ST', 'RS', 'LW', 'LF', 'CF', 'RF', 'RW',
+       'LAM', 'CAM', 'RAM', 'LM', 'LCM', 'CM', 'RCM', 'RM', 'LWB', 'LDM',
+       'CDM', 'RDM', 'RWB', 'LB', 'LCB', 'CB', 'RCB', 'RB', 'Crossing',
+       'Finishing', 'HeadingAccuracy', 'ShortPassing', 'Volleys', 'Dribbling',
+       'Curve', 'FKAccuracy', 'LongPassing', 'BallControl', 'Acceleration',
+       'SprintSpeed', 'Agility', 'Reactions', 'Balance', 'ShotPower',
+       'Jumping', 'Stamina', 'Strength', 'LongShots', 'Aggression',
+       'Interceptions', 'Positioning', 'Vision', 'Penalties', 'Composure',
+       'Marking', 'StandingTackle', 'SlidingTackle', 'GKDiving', 'GKHandling',
+       'GKKicking', 'GKPositioning', 'GKReflexes', 'Release Clause'],
+      dtype='object')</pre></div>
+      
 Basic Information about columns (datatype, count etc)
 ```python
 data_raw.info()
 ```
+
+<div class="output_subarea output_text output_stream output_stdout"><pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 18207 entries, 0 to 18206
+Data columns (total 89 columns):
+Unnamed: 0                  18207 non-null int64
+ID                          18207 non-null int64
+Name                        18207 non-null object
+Age                         18207 non-null int64
+Photo                       18207 non-null object
+Nationality                 18207 non-null object
+Flag                        18207 non-null object
+Overall                     18207 non-null int64
+Potential                   18207 non-null int64
+Club                        17966 non-null object
+Club Logo                   18207 non-null object
+Value                       18207 non-null object
+Wage                        18207 non-null object
+Special                     18207 non-null int64
+Preferred Foot              18159 non-null object
+International Reputation    18159 non-null float64
+Weak Foot                   18159 non-null float64
+Skill Moves                 18159 non-null float64
+Work Rate                   18159 non-null object
+Body Type                   18159 non-null object
+Real Face                   18159 non-null object
+Position                    18147 non-null object
+Jersey Number               18147 non-null float64
+Joined                      16654 non-null object
+Loaned From                 1264 non-null object
+Contract Valid Until        17918 non-null object
+Height                      18159 non-null object
+Weight                      18159 non-null object
+LS                          16122 non-null object
+ST                          16122 non-null object
+RS                          16122 non-null object
+LW                          16122 non-null object
+LF                          16122 non-null object
+CF                          16122 non-null object
+RF                          16122 non-null object
+RW                          16122 non-null object
+LAM                         16122 non-null object
+CAM                         16122 non-null object
+RAM                         16122 non-null object
+LM                          16122 non-null object
+LCM                         16122 non-null object
+CM                          16122 non-null object
+RCM                         16122 non-null object
+RM                          16122 non-null object
+LWB                         16122 non-null object
+LDM                         16122 non-null object
+CDM                         16122 non-null object
+RDM                         16122 non-null object
+RWB                         16122 non-null object
+LB                          16122 non-null object
+LCB                         16122 non-null object
+CB                          16122 non-null object
+RCB                         16122 non-null object
+RB                          16122 non-null object
+Crossing                    18159 non-null float64
+Finishing                   18159 non-null float64
+HeadingAccuracy             18159 non-null float64
+ShortPassing                18159 non-null float64
+Volleys                     18159 non-null float64
+Dribbling                   18159 non-null float64
+Curve                       18159 non-null float64
+FKAccuracy                  18159 non-null float64
+LongPassing                 18159 non-null float64
+BallControl                 18159 non-null float64
+Acceleration                18159 non-null float64
+SprintSpeed                 18159 non-null float64
+Agility                     18159 non-null float64
+Reactions                   18159 non-null float64
+Balance                     18159 non-null float64
+ShotPower                   18159 non-null float64
+Jumping                     18159 non-null float64
+Stamina                     18159 non-null float64
+Strength                    18159 non-null float64
+LongShots                   18159 non-null float64
+Aggression                  18159 non-null float64
+Interceptions               18159 non-null float64
+Positioning                 18159 non-null float64
+Vision                      18159 non-null float64
+Penalties                   18159 non-null float64
+Composure                   18159 non-null float64
+Marking                     18159 non-null float64
+StandingTackle              18159 non-null float64
+SlidingTackle               18159 non-null float64
+GKDiving                    18159 non-null float64
+GKHandling                  18159 non-null float64
+GKKicking                   18159 non-null float64
+GKPositioning               18159 non-null float64
+GKReflexes                  18159 non-null float64
+Release Clause              16643 non-null object
+dtypes: float64(38), int64(6), object(45)
+memory usage: 12.4+ MB
+</pre></div>
+
 Check out the shape of DataFrame object
 ```python
 data_raw.shape
 ```
+
+<div class="output_subarea output_text output_result"><pre>(18207, 89)</pre></div>
+
 Check if there are null values in the DataFrame
 ```python
 data_raw.isnull().any().any() # If true is returned --> there are null values in the DataFrame
 ```
+
+<div class="output_subarea output_text output_result"><pre>True</pre></div>
+
 Get the columns having null values
 ```python
 data_raw.isnull().any()
 ```
+
+<div class="output_subarea output_text output_result"><pre>Unnamed: 0                  False
+ID                          False
+Name                        False
+Age                         False
+Photo                       False
+Nationality                 False
+Flag                        False
+Overall                     False
+Potential                   False
+Club                         True
+Club Logo                   False
+Value                       False
+Wage                        False
+Special                     False
+Preferred Foot               True
+International Reputation     True
+Weak Foot                    True
+Skill Moves                  True
+Work Rate                    True
+Body Type                    True
+Real Face                    True
+Position                     True
+Jersey Number                True
+Joined                       True
+Loaned From                  True
+Contract Valid Until         True
+Height                       True
+Weight                       True
+LS                           True
+ST                           True
+                            ...  
+Dribbling                    True
+Curve                        True
+FKAccuracy                   True
+LongPassing                  True
+BallControl                  True
+Acceleration                 True
+SprintSpeed                  True
+Agility                      True
+Reactions                    True
+Balance                      True
+ShotPower                    True
+Jumping                      True
+Stamina                      True
+Strength                     True
+LongShots                    True
+Aggression                   True
+Interceptions                True
+Positioning                  True
+Vision                       True
+Penalties                    True
+Composure                    True
+Marking                      True
+StandingTackle               True
+SlidingTackle                True
+GKDiving                     True
+GKHandling                   True
+GKKicking                    True
+GKPositioning                True
+GKReflexes                   True
+Release Clause               True
+Length: 89, dtype: bool</pre></div>
+
 Get the total number of null values
 ```python
 data_raw.isnull().sum().sum()
 ```
+
+<div class="output_subarea output_text output_result"><pre>76984</pre></div>
+
 Get the number of null values for each of the columns
 ```python
 data_raw.isnull().sum()
 ```
+
+<div class="output_subarea output_text output_result"><pre>Unnamed: 0                      0
+ID                              0
+Name                            0
+Age                             0
+Photo                           0
+Nationality                     0
+Flag                            0
+Overall                         0
+Potential                       0
+Club                          241
+Club Logo                       0
+Value                           0
+Wage                            0
+Special                         0
+Preferred Foot                 48
+International Reputation       48
+Weak Foot                      48
+Skill Moves                    48
+Work Rate                      48
+Body Type                      48
+Real Face                      48
+Position                       60
+Jersey Number                  60
+Joined                       1553
+Loaned From                 16943
+Contract Valid Until          289
+Height                         48
+Weight                         48
+LS                           2085
+ST                           2085
+                            ...  
+Dribbling                      48
+Curve                          48
+FKAccuracy                     48
+LongPassing                    48
+BallControl                    48
+Acceleration                   48
+SprintSpeed                    48
+Agility                        48
+Reactions                      48
+Balance                        48
+ShotPower                      48
+Jumping                        48
+Stamina                        48
+Strength                       48
+LongShots                      48
+Aggression                     48
+Interceptions                  48
+Positioning                    48
+Vision                         48
+Penalties                      48
+Composure                      48
+Marking                        48
+StandingTackle                 48
+SlidingTackle                  48
+GKDiving                       48
+GKHandling                     48
+GKKicking                      48
+GKPositioning                  48
+GKReflexes                     48
+Release Clause               1564
+Length: 89, dtype: int64</pre></div>
 
 ## Contributing
 Fork it (https://github.com/qualityjacks/Fifa19_Insights/fork)<br>
